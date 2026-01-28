@@ -6,6 +6,7 @@ import About from '../pages/About';
 import Contact from '../pages/Contact';
 import Service from '../pages/Service';
 import Info from '../pages/Info';
+import Detail from '../pages/Detail';
 
 const AppRoute = () => {
   return (
@@ -20,6 +21,7 @@ const AppRoute = () => {
         
         <Route path='/contact' element={<Contact/>}></Route>
         <Route path='/info' element={<Info/>}></Route>
+        <Route path='/detail/:id' element={<Detail/>}></Route>
 
         </Route>
     </Routes>

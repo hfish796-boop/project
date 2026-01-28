@@ -74,4 +74,4 @@ export const timelineData = [
     title: "50K+ Students",
     desc: "Growing community of learners worldwide",
   },
-];
+]; 

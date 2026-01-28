@@ -1,5 +1,5 @@
 import React from 'react'
-import { BookOpenText } from 'lucide-react'
+import { BookOpenText,  } from 'lucide-react'
 import { Users } from 'lucide-react'
 import { Star } from 'lucide-react'
 import { Clock3 } from 'lucide-react'
@@ -7,6 +7,7 @@ import { Award } from 'lucide-react'
 import { Headphones } from 'lucide-react'
 import Card from '../component/Card'
 import { courses } from '../data/data'
+import { Link } from 'react-router-dom'
 // console.log(data);
 
 
@@ -218,9 +219,14 @@ const Home = () => {
         <div className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2.5 md:mt-10 md:px-2 md:py-3'>
           
 
-
-          {courses.map((c)=> ( <Card  title={c.title} price={c.price} img={c.img} instructor={c.instructor} s_title={c.s_title}/> ))}
-         
+          
+            
+          {courses.map((c)=> ( 
+            <Link to={`/detail/${c['id']} `}>
+            <Card  title={c.title} price={c.price} img={c.img} instructor={c.instructor} s_title={c.s_title}/> 
+           </Link>
+            ))}
+           
 
 
 
